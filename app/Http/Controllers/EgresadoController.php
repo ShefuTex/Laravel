@@ -51,10 +51,12 @@ return view('registro_egresado', array('meses' => $months));
 
     public function show(){
       $egresado=Egresado::all();
-      if (!is_null($egresado))
+      if (!is_null($egresado)){
       return view('mostrar', ['egresados' => $egresado -> toArray() ]);
-      else
-      return response('no encontrado, 404');
+      }
+      else {
+      return view('registro_egresado');
+      }
     }
 
 }

@@ -25,11 +25,13 @@ Route::get('/registro_empresa', function () {
 
 Route::get('asco', 'EgresadoController@create');
 
-Route::post('asco', 'EgresadoController@store');
+Route::post('Registrar', 'EgresadoController@store');
 
-Route::get('mostrar', 'EgresadoController@show');
+Route::post('mostrar', 'EgresadoController@show');
 
 Route::get('registro_egresado', 'EgresadoController@mes');
+Route::post('altacarrera','PerfilController@store');
+Route::match(['get', 'post'],'mostrar2', 'PerfilController@todos');
 
 /*
 |--------------------------------------------------------------------------

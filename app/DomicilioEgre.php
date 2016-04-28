@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Perfil extends Model
+class DomicilioEgre extends Model
 {
-    protected $table = 'perfiles';
+    //
 }
